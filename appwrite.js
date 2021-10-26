@@ -11,47 +11,6 @@ client
 
 const db = new sdk.Database(client);
 
-const run = async () => {
-  try {
-    let collection = await db.createCollection(
-      "Links",
-      [],
-      [],
-      [
-        {
-          label: "originalURL",
-          key: "originalurl",
-          type: "text",
-          default: "Empty Name",
-          required: true,
-          array: false,
-        },
-        {
-          label: "uniqueName",
-          key: "uniquename",
-          type: "text",
-          default: "Empty",
-          required: true,
-          array: false,
-        },
-        {
-          label: "shortUrl",
-          key: "shorturl",
-          type: "text",
-          default: "Empty",
-          required: true,
-          array: false,
-        },
-      ]
-    );
-    console.log(collection.$id);
-  } catch (e) {
-    console.log(e);
-  }
-};
-
-//run();
-
 const getDB = () => db;
 
 module.exports = {

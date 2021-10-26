@@ -14,7 +14,8 @@ button.addEventListener("click", (event) => {
   let originalURL = originalURLInp.value;
   let uniqueName = uniqueNameInp.value;
 
-  if (originalURL.trim() && uniqueName.trim()) {
+  if (originalURL.trim()) {
+    button.value = "Loading";
     originalURLInp.style.border = "none";
     uniqueNameInp.style.border = "none";
     if (
@@ -42,14 +43,18 @@ button.addEventListener("click", (event) => {
         }
       })
       .then((data) => {
+        button.value = "Create Link";
         newLink.innerHTML = data.shortUrl;
-        newLink.href = uniqueName;
+        let urlArray = data.shortUrl.split("/");
+        newLink.href = urlArray[urlArray.length - 1];
         failureDiv.style.display = "none";
         successDiv.style.display = "block";
       })
-      .catch((err) => console.log("err", err));
+      .catch((err) => {
+        button.value = "Create Link";
+        console.log("err", err);
+      });
   } else {
     originalURLInp.style.border = "solid 1px red";
-    uniqueNameInp.style.border = "solid 1px red";
   }
 });

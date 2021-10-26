@@ -10,15 +10,15 @@ You can get the APPWRITE_KEY and PROJECT_ID from your Appwrite Dashboard after c
 When done, run
 
 ```
-node appwrite.js
+node appwrite-links.js
 ```
 
-The command runs the appwrite.js which creates our LINKS collection and spits out its ID, so copy it and insert it into the .env file.
+The command runs the appwrite-links.js which creates our LINKS collection and spits out its ID, so copy it and insert it into the .env file.
 
 Then run
 
 ```
-yarn dev
+yarn start
 ```
 
 to start the local server.
