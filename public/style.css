@@ -1,71 +1,76 @@
-*{
+* {
   padding: 0;
   margin: 0;
 }
-body{
+body {
   font-size: 10px;
 }
-.container{
+.container {
   position: relative;
-  background-image: url('bg.jpg');
+  background-image: url("bg.jpg");
   background-size: cover;
   background-position: center;
   min-height: 100vh;
   overflow: auto;
 }
-.inner-container{
-  position: absolute; 
+.inner-container {
+  position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50% ,-50%);
+  transform: translate(-50%, -50%);
   width: 90%;
-  font-family: 'Trebuchet MS', Geneva, Tahoma, sans-serif;
-  color: #FFAB0F;
+  font-family: "Trebuchet MS", Geneva, Tahoma, sans-serif;
+  color: #ffab0f;
   text-align: center;
 }
-h1{
+h1 {
   font-size: 5rem;
 }
-.originalURL,.baseURL,.uniqueName{
+.originalURL,
+.baseURL,
+.uniqueName {
   border: none;
-  font-family: 'Lucida Sans';
+  font-family: "Lucida Sans";
   font-size: 1rem;
   border-radius: 5px;
-  background-color: #00022E;
+  background-color: #00022e;
   color: white;
   text-align: center;
-  padding: .6rem;
+  padding: 0.6rem;
 }
-.originalURL{
+.originalURL {
   display: block;
   margin: 1rem auto;
   width: 18rem;
 }
-.baseURL,.uniqueName{
+.baseURL,
+.uniqueName {
   width: 8rem;
   margin: 0 auto;
 }
-.baseURL{
-  color: rgba(255,255,255,.7);
+.baseURL {
+  color: rgba(255, 255, 255, 0.7);
 }
-.btn{
+.btn {
   display: block;
   margin: 0.6rem auto;
-  padding: .4rem;
+  padding: 0.4rem;
   border-radius: 4px;
-  background-color: #3E82FC;
+  background-color: #3e82fc;
   border: none;
-  transition: all .3s;
+  transition: all 0.3s;
+  font-family: "Trebuchet MS", Geneva, Tahoma, sans-serif;
 }
-.btn:hover{
+.btn:hover {
   background-color: white;
 }
-.success,.failure{
+.success,
+.failure {
   display: none;
   margin-top: 2rem;
   font-size: 2rem;
 }
-.success .short{
+.success .short {
   display: block;
   font-size: 1.5rem;
   font-style: italic;
